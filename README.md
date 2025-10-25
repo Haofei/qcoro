@@ -172,13 +172,11 @@ objects, which is well-known and established API and makes generators compatible
 with existing algorithms.
 
 ```cpp
-QCoro::Generator<int> fibonacci() {
-    quint64 a = 0, b = 0;
+QCoro::Generator<quint64> fibonacci() {
+    quint64 a = 0, b = 1;
     Q_FOREVER {
-        co_yield b;
-        const auto tmp = b;
-        a = b;
-        b += tmp;
+        co_yield a;
+        a = std::exchange(b, a + b);
     }
 }
 
