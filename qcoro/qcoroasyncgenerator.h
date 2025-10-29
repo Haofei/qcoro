@@ -8,6 +8,7 @@
 #pragma once
 
 #include "coroutine.h"
+#include "mixins_p.h"
 
 #include <iterator>
 #include <exception>
@@ -25,7 +26,7 @@ class AsyncGeneratorIterator;
 class AsyncGeneratorYieldOperation;
 class AsyncGeneratorAdvanceOperation;
 
-class AsyncGeneratorPromiseBase {
+class AsyncGeneratorPromiseBase : public AwaitTransformMixin {
 public:
     AsyncGeneratorPromiseBase() noexcept = default;
     AsyncGeneratorPromiseBase(const AsyncGeneratorPromiseBase &) = delete;
