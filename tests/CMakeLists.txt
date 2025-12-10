@@ -64,9 +64,10 @@ function(qcoro_add_dbus_test _name)
     target_compile_definitions(test-${_name} PRIVATE TESTDBUSSERVER_EXECUTABLE=\"$<TARGET_FILE:testdbusserver>\")
     if (APPLE)
         # On MacOS dbus-launch doesn't work, so we rely on the session dbus running
+        # TODO: check whether dbus-run-session works
         add_test(NAME test-${_name} COMMAND test-${_name})
     else()
-        add_test(NAME test-${_name} COMMAND dbus-launch $<TARGET_FILE:test-${_name}>)
+        add_test(NAME test-${_name} COMMAND dbus-run-session $<TARGET_FILE:test-${_name}>)
     endif()
     _enable_supressions(${_name})
 endfunction()
