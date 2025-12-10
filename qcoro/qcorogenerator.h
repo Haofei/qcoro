@@ -199,7 +199,7 @@ private:
     /**
      * @brief Constructs an invalid iterator.
      **/
-    explicit GeneratorIterator(std::nullptr_t) {}
+    explicit constexpr GeneratorIterator(std::nullptr_t) noexcept {}
     /**
      * @brief Constructs an iterator associated with the given generator coroutine.
      **/
@@ -281,7 +281,7 @@ public:
      * Can be used to check whether the generator have produced another value or
      * whether it has finished.
      **/
-    iterator end() {
+    constexpr iterator end() const noexcept {
         return iterator{nullptr};
     }
 
