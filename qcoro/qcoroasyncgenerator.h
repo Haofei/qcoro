@@ -204,7 +204,7 @@ public:
     using reference = std::add_lvalue_reference_t<T>;
     using pointer = std::add_pointer_t<value_type>;
 
-    explicit AsyncGeneratorIterator(std::nullptr_t) noexcept {}
+    explicit constexpr AsyncGeneratorIterator(std::nullptr_t) noexcept {}
     explicit AsyncGeneratorIterator(handle_type coroutine) noexcept
         : m_coroutine(coroutine)
     {}
