@@ -115,7 +115,7 @@ qcoro_add_test(qcorolazytask)
 qcoro_add_test(testconstraints)
 qcoro_add_test(qfuture LINK_LIBRARIES Qt${QT_VERSION_MAJOR}::Concurrent)
 qcoro_add_test(qcorogenerator)
-qcoro_add_test(qcoroasyncgenerator)
+qcoro_add_test(qcoroasyncgenerator LINK_LIBRARIES QCoro${QT_VERSION_MAJOR}Network Qt${QT_VERSION_MAJOR}::Network)
 qcoro_add_test(qcorowaitfor)
 
 if (QCORO_WITH_QTDBUS)
