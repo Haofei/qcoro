@@ -103,7 +103,8 @@ inline AsyncGeneratorYieldOperation AsyncGeneratorPromiseBase::internal_yield_va
 
 class IteratorAwaitableBase {
 protected:
-    explicit IteratorAwaitableBase(std::nullptr_t) noexcept {}
+    constexpr explicit IteratorAwaitableBase(std::nullptr_t) noexcept {}
+
     IteratorAwaitableBase(
         AsyncGeneratorPromiseBase &promise,
         std::coroutine_handle<> producerCoroutine) noexcept
@@ -354,7 +355,7 @@ public:
     }
 
     /// Returns an iterator representing the finished generator.
-    auto end() noexcept {
+    constexpr iterator end() const noexcept {
         return iterator{nullptr};
     }
 
