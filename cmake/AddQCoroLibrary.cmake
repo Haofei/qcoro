@@ -124,7 +124,7 @@ function(add_qcoro_library)
         ${target_include_interface} $<BUILD_INTERFACE:${QCORO_SOURCE_DIR}/qcoro>
         ${target_include_interface} $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         ${target_include_interface} $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
-        ${target_include_interface} $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>/QCoro
+        ${target_include_interface} $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/QCoro>
         ${target_include_interface} $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
         ${target_include_interface} $<INSTALL_INTERFACE:${QCORO_INSTALL_INCLUDEDIR}>
         ${target_include_interface} $<INSTALL_INTERFACE:${QCORO_INSTALL_INCLUDEDIR}/qcoro>
