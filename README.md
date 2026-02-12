@@ -38,7 +38,7 @@ and others, that allow to `co_await` their asynchronous operations directly.
 Additionally, there's a magical `qCoro()` function that can wrap many native Qt functions and types
 to make them coroutine-friendly.
 
-Go check the [documentation](https://qcoro.dev/reference) for a full list of all supported
+Go check the [documentation](https://qcoro.dev/reference/coro) for a full list of all supported
 features and Qt types.
 
 ### `QDBusPendingCall`
