@@ -22,7 +22,7 @@ using namespace std::chrono_literals;
 //! QTcpServer wrapper with co_awaitable-friendly API.
 class QCORONETWORK_EXPORT QCoroTcpServer {
     //! An Awaitable that suspends the coroutine until new connection is available
-    class WaitForNewConnectionOperation final : public WaitOperationBase<QTcpServer> {
+    class QCORONETWORK_EXPORT WaitForNewConnectionOperation final : public WaitOperationBase<QTcpServer> {
     public:
         WaitForNewConnectionOperation(QTcpServer *server, int timeout_msecs = 30'000);
         bool await_ready() const noexcept;

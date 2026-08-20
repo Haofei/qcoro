@@ -13,7 +13,7 @@ namespace QCoro::detail {
 
 class QCORONETWORK_EXPORT QCoroNetworkReply final : public QCoroIODevice {
 private:
-    class WaitForFinishedOperation final {
+    class QCORONETWORK_EXPORT WaitForFinishedOperation final {
     public:
         explicit WaitForFinishedOperation(QPointer<QNetworkReply> reply);
         ~WaitForFinishedOperation();

@@ -98,7 +98,7 @@ private:
     QSharedDataPointer<QmlTaskPrivate> d;
 };
 
-class QmlTaskListener : public QObject {
+class QCOROQML_EXPORT QmlTaskListener : public QObject {
     Q_OBJECT
     QML_ANONYMOUS
     Q_PROPERTY(QVariant value READ value NOTIFY valueChanged)
