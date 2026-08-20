@@ -18,7 +18,7 @@ namespace QCoro::detail {
 
 class QCORODBUS_EXPORT QCoroDBusPendingCall {
 private:
-    class WaitForFinishedOperation {
+    class QCORODBUS_EXPORT WaitForFinishedOperation {
     public:
         explicit WaitForFinishedOperation(const QDBusPendingCall &call);
 

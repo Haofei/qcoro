@@ -17,7 +17,7 @@ namespace QCoro::detail {
 
 class QCOROCORE_EXPORT QCoroTimer {
 private:
-    class WaitForTimeoutOperation {
+    class QCOROCORE_EXPORT WaitForTimeoutOperation {
     public:
         explicit WaitForTimeoutOperation(QTimer *timer);
         explicit WaitForTimeoutOperation(QTimer &timer);

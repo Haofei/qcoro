@@ -21,7 +21,7 @@ namespace detail {
 class ThreadContextPrivate;
 } // namespace detail
 
-class ThreadContext {
+class QCOROCORE_EXPORT ThreadContext {
 public:
     explicit ThreadContext(QThread *thread);
     ~ThreadContext();
@@ -44,7 +44,7 @@ private:
     std::unique_ptr<detail::ThreadContextPrivate> d;
 };
 
-ThreadContext moveToThread(QThread *thread);
+QCOROCORE_EXPORT ThreadContext moveToThread(QThread *thread);
 
 } // namespace QCoro
 
