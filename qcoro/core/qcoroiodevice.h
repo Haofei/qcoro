@@ -20,7 +20,7 @@ namespace QCoro::detail {
 
 class QCOROCORE_EXPORT QCoroIODevice {
 private:
-    class OperationBase {
+    class QCOROCORE_EXPORT OperationBase {
     public:
         Q_DISABLE_COPY(OperationBase)
         QCORO_DEFAULT_MOVE(OperationBase)
@@ -39,7 +39,7 @@ private:
     };
 
 protected:
-    class ReadOperation : public OperationBase {
+    class QCOROCORE_EXPORT ReadOperation : public OperationBase {
     public:
         ReadOperation(QIODevice *device, std::function<QByteArray(QIODevice *)> &&resultCb);
         Q_DISABLE_COPY(ReadOperation)
@@ -53,7 +53,7 @@ protected:
         std::function<QByteArray(QIODevice *)> mResultCb;
     };
 
-    class ReadAllOperation final : public ReadOperation {
+    class QCOROCORE_EXPORT ReadAllOperation final : public ReadOperation {
     public:
         explicit ReadAllOperation(QIODevice *device);
         explicit ReadAllOperation(QIODevice &device);
